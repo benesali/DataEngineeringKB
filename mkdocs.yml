@@ -1,0 +1,126 @@
+site_name: Data Engineering Knowledge Base
+site_description: Introductory reference for data engineers — traditional DWH, modern warehousing, and everything in between.
+site_author: ""
+repo_url: ""  # add your GitHub repo URL here
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+
+  - Getting Started:
+    - getting-started/index.md
+    - What is Data Engineering?: getting-started/what-is-de.md
+    - Key Roles & Skills: getting-started/roles-and-skills.md
+    - Core Concepts Glossary: getting-started/glossary.md
+
+  - Traditional Data Warehousing:
+    - traditional-dwh/index.md
+    - Inmon (3NF / Enterprise DWH): traditional-dwh/inmon.md
+    - Kimball (Dimensional Modeling): traditional-dwh/kimball.md
+    - Data Vault: traditional-dwh/data-vault.md
+    - Operational Data Store (ODS): traditional-dwh/ods.md
+    - Corporate Information Factory: traditional-dwh/corporate-information-factory.md
+    - ETL Design Patterns: traditional-dwh/etl-design.md
+    - Metadata in the DWH: traditional-dwh/metadata.md
+    - Information Delivery & User Classes: traditional-dwh/information-delivery.md
+    - Inmon vs Kimball vs Data Vault: traditional-dwh/comparison.md
+
+  - Data Modeling:
+    - data-modeling/index.md
+    - Star Schema: data-modeling/star-schema.md
+    - Snowflake Schema: data-modeling/snowflake-schema.md
+    - Slowly Changing Dimensions (SCD): data-modeling/scd.md
+    - Fact Table Types: data-modeling/fact-types.md
+    - Hierarchies: data-modeling/hierarchies.md
+    - Keys — Natural, Surrogate, Business: data-modeling/keys.md
+    - OLAP — Multidimensional Analysis: data-modeling/olap.md
+    - Calendar & Time Dimension: data-modeling/calendar-time-dimension.md
+    - DWH Relational Modeling: data-modeling/dwh-relational-modeling.md
+
+  - Medallion Architecture:
+    - medallion-architecture/index.md
+    - Bronze Layer (Raw): medallion-architecture/bronze.md
+    - Silver Layer (Cleansed): medallion-architecture/silver.md
+    - Gold Layer (Serving): medallion-architecture/gold.md
+    - Medallion vs Traditional DWH: medallion-architecture/vs-traditional.md
+    - Deep Dive (Strengholt 2025):
+      - Architecture Fundamentals: medallion-architecture/deep-dive/architecture-fundamentals.md
+      - Spark, Delta Lake & Ingestion: medallion-architecture/deep-dive/spark-delta-ingestion.md
+      - Layer Design Patterns: medallion-architecture/deep-dive/layer-design-patterns.md
+      - Fabric Setup & Bronze Pipeline: medallion-architecture/deep-dive/fabric-setup-and-bronze-pipeline.md
+      - Bronze Implementation & Silver Intro: medallion-architecture/deep-dive/bronze-implementation-silver-intro.md
+      - Silver Implementation: medallion-architecture/deep-dive/silver-implementation.md
+      - Gold Implementation: medallion-architecture/deep-dive/gold-implementation.md
+      - Data Products & Governance: medallion-architecture/deep-dive/data-products-and-governance.md
+      - Case Studies — AP Pension, Amadeus, ZEISS: medallion-architecture/deep-dive/case-studies-amadeus-zeiss.md
+      - Scaling & Governance: medallion-architecture/deep-dive/scaling-and-governance.md
+      - Governance, Security & GenAI: medallion-architecture/deep-dive/governance-security-and-genai.md
+      - GenAI, Future Trends & Conclusion: medallion-architecture/deep-dive/genai-future-and-conclusion.md
+
+  - Data Mesh:
+    - data-mesh/index.md
+    - The Four Principles: data-mesh/principles.md
+    - Data Contracts: data-mesh/data-contracts.md
+    - Data Mesh vs Medallion: data-mesh/vs-medallion.md
+    - Readiness & Implementation Reality: data-mesh/readiness.md
+
+  - Modern Warehousing:
+    - modern-warehousing/index.md
+    - Cloud Data Warehouses: modern-warehousing/cloud-dw.md
+    - Lakehouse Architecture: modern-warehousing/lakehouse.md
+    - Delta Lake & Open Table Formats: modern-warehousing/open-table-formats.md
+    - ELT vs ETL: modern-warehousing/elt-vs-etl.md
+
+  - Scalability:
+    - scalability/index.md
+    - Partitioning & Clustering: scalability/partitioning.md
+    - Distributed Processing (Spark): scalability/distributed-processing.md
+    - Incremental vs Full Loads: scalability/incremental-loads.md
+    - Schema Evolution: scalability/schema-evolution.md
+
+  - Best Practices:
+    - best-practices/index.md
+    - Naming Conventions: best-practices/naming-conventions.md
+    - Idempotency: best-practices/idempotency.md
+    - Data Quality: best-practices/data-quality.md
+    - Documentation Standards: best-practices/documentation.md
+    - SQL Performance Patterns: best-practices/sql-performance.md
+    - Python for Data Engineering: best-practices/python-data-engineering.md
