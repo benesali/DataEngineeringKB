@@ -8,7 +8,7 @@ Consistent naming makes a data platform navigable without documentation. Inconsi
 |---|---|---|
 | `Fact` prefix | `FactSales`, `FactOrders` | Kimball fact tables |
 | `Dim` prefix | `DimCustomer`, `DimProduct` | Kimball dimension tables |
-| `stg` prefix | `stgSalesforce`, `stgErp` | Staging / source-aligned tables |
+| `stg` prefix | `stgCrm`, `stgErp` | Staging / source-aligned tables |
 | `TD_` prefix | `TD_Product` | Dimension in enterprise DWH (Inmon style) |
 | `TF_` prefix | `TF_Sales` | Fact in enterprise DWH |
 | `TS_` prefix | `TS_CustomerHistory` | Snapshot / history tables |
